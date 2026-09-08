@@ -6,37 +6,42 @@ const issued = new Date().toLocaleDateString("pt-BR", {
 
 export default function Footer() {
   return (
-    <footer className="px-6 py-16 sm:px-10">
-      <div className="mx-auto max-w-4xl">
-        <div className="font-mono text-xs uppercase tracking-[0.2em] text-muted">
-          Assinatura
-        </div>
+    <footer id="contato" className="scroll-mt-6 px-6 py-20 sm:px-10 sm:py-24">
+      <div className="mx-auto max-w-5xl">
+        <p className="eyebrow">Vamos conversar?</p>
 
-        <p className="mt-4 max-w-xl text-base leading-relaxed text-text/90">
-          Aberto a estágio, projetos e conversas sobre sistemas de dados.
-          Chame no e-mail ou dê uma olhada no código.
-        </p>
+        <div className="mt-4 flex flex-col justify-between gap-8 sm:flex-row sm:items-end">
+          <h2 className="section-title max-w-2xl">
+            Se a conversa envolve software, dados ou uma boa ideia, já temos por onde começar.
+          </h2>
 
-        <div className="mt-6 flex flex-wrap gap-4 font-mono text-sm">
           <a
             href="mailto:felipe.alves0850@gmail.com"
-            className="text-stock-in underline decoration-stock-in/40 underline-offset-4 hover:decoration-stock-in"
+            className="shrink-0 rounded-sm border border-stock-in bg-stock-in px-5 py-3 font-mono text-sm text-ink transition-colors hover:bg-stock-in/85"
           >
-            felipe.alves0850@gmail.com
-          </a>
-          <a
-            href="https://github.com/ffelipealves"
-            target="_blank"
-            rel="noreferrer noopener"
-            className="text-text underline decoration-line underline-offset-4 hover:decoration-muted"
-          >
-            github.com/ffelipealves
+            mandar um e-mail ↗
           </a>
         </div>
 
-        <div className="mt-12 flex flex-wrap justify-between gap-2 border-t border-line pt-6 font-mono text-[0.7rem] text-muted">
-          <span>documento gerado em {issued}</span>
-          <span>manifesto nº 2026-01</span>
+        <div className="mt-16 flex flex-wrap items-center justify-between gap-5 border-t border-line pt-6 font-mono text-[0.7rem] text-muted">
+          <span>Feito em Fortaleza, entre código e alguns riffs.</span>
+          <div className="flex gap-5">
+            <a
+              href="https://github.com/ffelipealves"
+              target="_blank"
+              rel="noreferrer noopener"
+              className="transition-colors hover:text-text"
+            >
+              GitHub ↗
+            </a>
+            <a
+              href="mailto:felipe.alves0850@gmail.com"
+              className="transition-colors hover:text-text"
+            >
+              E-mail ↗
+            </a>
+          </div>
+          <span>atualizado em {issued}</span>
         </div>
       </div>
     </footer>

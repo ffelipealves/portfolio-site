@@ -15,9 +15,9 @@ const plexSans = IBM_Plex_Sans({
 });
 
 export const metadata: Metadata = {
-  title: "Felipe Alves — Manifesto de projetos",
+  title: "Felipe Alves — Desenvolvedor Fullstack",
   description:
-    "Felipe Alves, estudante de Engenharia da Computação na UFC. Sistemas de dados, APIs e o que já foi despachado.",
+    "Desenvolvedor fullstack com foco em backend, APIs e sistemas conectados. Engenharia da Computação na UFC, em Fortaleza.",
 };
 
 export default function RootLayout({ children }: LayoutProps<"/">) {

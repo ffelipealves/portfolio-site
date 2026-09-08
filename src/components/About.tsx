@@ -1,31 +1,46 @@
-const spec: Array<[string, string]> = [
-  ["local", "Ceará, Brasil"],
-  ["formação", "Engenharia da Computação — UFC"],
-  ["foco", "Backend, sistemas de dados, APIs"],
-  ["stack", "Python, TypeScript, FastAPI, Next.js, PostgreSQL, Docker"],
-];
+import { profileFacts } from "@/data/profile";
 
 export default function About() {
   return (
-    <section className="border-b border-line px-6 py-20 sm:px-10 sm:py-28">
-      <div className="mx-auto max-w-4xl">
-        <div className="font-mono text-xs uppercase tracking-[0.2em] text-muted">
-          Ficha técnica
+    <section
+      id="sobre"
+      className="scroll-mt-6 border-b border-line px-6 py-20 sm:px-10 sm:py-28"
+    >
+      <div className="mx-auto grid max-w-5xl gap-12 md:grid-cols-[1.35fr_0.65fr] md:gap-20">
+        <div>
+          <p className="eyebrow">Um pouco sobre mim</p>
+          <h2 className="section-title mt-4">
+            A curiosidade veio antes do código.
+          </h2>
+
+          <div className="mt-7 space-y-5 text-base leading-relaxed text-text/80 sm:text-lg">
+            <p>
+              Sempre gostei de mexer em computadores e entender o que existia
+              por trás da tela. Essa curiosidade me levou primeiro às redes e,
+              depois, à Engenharia da Computação na UFC.
+            </p>
+            <p>
+              Hoje, gosto especialmente de projetos em que software, dados e
+              hardware precisam conversar. E gosto ainda mais quando posso
+              construir isso ao lado de pessoas de áreas diferentes — é onde
+              aparecem as melhores perguntas e os maiores aprendizados.
+            </p>
+          </div>
         </div>
 
-        <div className="mt-8 divide-y divide-line border-t border-line">
-          {spec.map(([label, value]) => (
+        <dl className="divide-y divide-line border-y border-line md:self-end">
+          {profileFacts.map(([label, value]) => (
             <div
               key={label}
-              className="grid grid-cols-1 gap-1 py-4 sm:grid-cols-[10rem_1fr] sm:gap-6"
+              className="py-4"
             >
               <dt className="font-mono text-xs uppercase tracking-wide text-muted">
                 {label}
               </dt>
-              <dd className="text-sm text-text/90">{value}</dd>
+              <dd className="mt-1.5 text-sm text-text/90">{value}</dd>
             </div>
           ))}
-        </div>
+        </dl>
       </div>
     </section>
   );

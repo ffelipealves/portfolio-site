@@ -5,15 +5,19 @@ export default function Spotlight() {
   if (!estoca) return null;
 
   return (
-    <section className="border-b border-line px-6 py-20 sm:px-10 sm:py-28">
-      <div className="mx-auto max-w-4xl">
-        <div className="font-mono text-xs uppercase tracking-[0.2em] text-muted">
-          Nota de despacho — {estoca.ref}
-        </div>
+    <section className="border-b border-line bg-panel/35 px-6 py-20 sm:px-10 sm:py-28">
+      <div className="mx-auto max-w-5xl">
+        <p className="eyebrow">Por dentro de {estoca.ref}</p>
 
-        <h2 className="mt-4 font-mono text-2xl font-semibold text-text sm:text-3xl">
-          Como o {estoca.name} funciona por dentro
+        <h2 className="section-title mt-4">
+          Um projeto para aprender construindo — e deixar qualquer pessoa testar.
         </h2>
+
+        <p className="mt-5 max-w-2xl text-base leading-relaxed text-muted">
+          No {estoca.name}, quis ir além de uma tela de cadastro: o desafio foi
+          organizar regras de estoque, permissões e isolamento de dados em uma
+          experiência segura para demonstração.
+        </p>
 
         <div className="mt-8 grid gap-px overflow-hidden rounded-sm border border-line bg-line sm:grid-cols-2">
           {estoca.highlights?.map((highlight) => (
@@ -25,7 +29,7 @@ export default function Spotlight() {
           ))}
         </div>
 
-        <p className="mt-8 max-w-2xl text-sm leading-relaxed text-muted">
+        <p className="mt-8 max-w-3xl text-sm leading-relaxed text-muted">
           O acesso de demonstração já vem preenchido na interface — perfil de
           administrador e de operador, ambos com senha{" "}
           <code className="rounded-sm border border-line px-1.5 py-0.5 font-mono text-xs text-text">

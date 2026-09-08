@@ -14,11 +14,19 @@ const statusLabel: Record<ProjectStatus, string> = {
 
 export default function ManifestTable() {
   return (
-    <section id="manifesto" className="border-b border-line px-6 py-20 sm:px-10 sm:py-28">
-      <div className="mx-auto max-w-4xl">
-        <div className="flex items-baseline justify-between gap-4 font-mono text-xs uppercase tracking-[0.2em] text-muted">
-          <span>Itens do manifesto</span>
-          <span>{projects.length} lançamento(s)</span>
+    <section
+      id="projetos"
+      className="scroll-mt-6 border-b border-line px-6 py-20 sm:px-10 sm:py-28"
+    >
+      <div className="mx-auto max-w-5xl">
+        <div className="flex flex-wrap items-end justify-between gap-5">
+          <div className="max-w-2xl">
+            <p className="eyebrow">Projetos</p>
+            <h2 className="section-title mt-4">Coisas que já saíram do papel.</h2>
+          </div>
+          <span className="font-mono text-xs text-muted">
+            {projects.length} entrada(s) no manifesto
+          </span>
         </div>
 
         <div className="mt-8 divide-y divide-line border-t border-line">
@@ -27,7 +35,7 @@ export default function ManifestTable() {
             return (
               <article
                 key={project.ref}
-                className={`grid grid-cols-1 gap-x-6 gap-y-3 py-6 sm:grid-cols-[7rem_1fr_9rem] ${
+                className={`grid grid-cols-1 gap-x-8 gap-y-3 py-8 sm:grid-cols-[7rem_1fr_9rem] ${
                   isNext ? "opacity-60" : ""
                 }`}
               >

@@ -32,12 +32,48 @@
 
 html {
   background: var(--ink);
+  scroll-behavior: smooth;
 }
 
 body {
   background: var(--ink);
   color: var(--text);
   font-family: var(--font-sans);
+}
+
+a {
+  text-underline-offset: 0.2em;
+}
+
+.eyebrow {
+  font-family: var(--font-plex-mono);
+  font-size: 0.75rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--stock-in);
+}
+
+.section-title {
+  max-width: 48rem;
+  font-family: var(--font-plex-mono);
+  font-size: clamp(1.7rem, 4vw, 2.6rem);
+  font-weight: 600;
+  line-height: 1.12;
+  letter-spacing: -0.04em;
+  color: var(--text);
+}
+
+.hero-grid::before {
+  position: absolute;
+  inset: 0;
+  content: "";
+  pointer-events: none;
+  background-image:
+    linear-gradient(to right, color-mix(in srgb, var(--line) 36%, transparent) 1px, transparent 1px),
+    linear-gradient(to bottom, color-mix(in srgb, var(--line) 24%, transparent) 1px, transparent 1px),
+    radial-gradient(circle at 78% 18%, color-mix(in srgb, var(--stock-in) 10%, transparent), transparent 30%);
+  background-size: 64px 64px, 64px 64px, 100% 100%;
+  mask-image: linear-gradient(to bottom, black, transparent 92%);
 }
 
 ::selection {
@@ -66,6 +102,10 @@ body {
 }
 
 @media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
   .print-in {
     animation: none;
   }
