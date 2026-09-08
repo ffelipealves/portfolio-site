@@ -76,6 +76,38 @@ a {
   mask-image: linear-gradient(to bottom, black, transparent 92%);
 }
 
+.project-placeholder {
+  background-image:
+    linear-gradient(to right, color-mix(in srgb, var(--line) 50%, transparent) 1px, transparent 1px),
+    linear-gradient(to bottom, color-mix(in srgb, var(--line) 50%, transparent) 1px, transparent 1px),
+    radial-gradient(circle at center, color-mix(in srgb, var(--stock-low) 8%, transparent), transparent 50%);
+  background-size: 32px 32px, 32px 32px, 100% 100%;
+}
+
+.media-strip {
+  scrollbar-color: var(--stock-in) var(--panel);
+  scrollbar-width: thin;
+}
+
+.media-strip:focus-visible {
+  outline-offset: 6px;
+}
+
+@keyframes project-modal-enter {
+  from {
+    opacity: 0;
+    transform: translateY(12px) scale(0.985);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+.project-modal-enter {
+  animation: project-modal-enter 220ms ease-out both;
+}
+
 ::selection {
   background: var(--stock-in);
   color: var(--ink);
@@ -107,6 +139,10 @@ a {
   }
 
   .print-in {
+    animation: none;
+  }
+
+  .project-modal-enter {
     animation: none;
   }
 }
