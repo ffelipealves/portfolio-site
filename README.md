@@ -175,10 +175,10 @@ disponível.
 
 A versão de produção é hospedada na Vercel:
 
-- [portfolio-site-felipe-team3.vercel.app](https://portfolio-site-felipe-team3.vercel.app)
+- [portfolio-site-five-zeta-16.vercel.app](https://portfolio-site-five-zeta-16.vercel.app)
 
 O projeto da Vercel está integrado ao repositório do GitHub. Novos commits
 enviados para a branch `main` iniciam automaticamente um deploy de produção.
 
-O acesso ao endereço publicado pode depender das regras de proteção da Vercel
-configuradas para o projeto.
+O domínio de produção é público. Endereços técnicos de deploy gerados pela
+Vercel podem continuar protegidos e não devem ser usados como link de divulgação.
