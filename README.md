@@ -58,6 +58,7 @@ src/
 │   ├── About.tsx         # introdução pessoal e formação
 │   ├── BeyondCode.tsx    # guitarra e videogames
 │   ├── Capabilities.tsx  # áreas de atuação e ferramentas
+│   ├── EstocaWakeUp.tsx  # aquecimento não bloqueante da API do Estoca
 │   ├── Experience.tsx    # trajetória profissional
 │   ├── Footer.tsx        # chamada final e canais de contato
 │   ├── Header.tsx        # identidade e navegação por âncoras
@@ -174,6 +175,9 @@ ao Tailwind por meio de `@theme inline`. A interface inclui:
 - A data no rodapé é produzida com `new Date()` durante a renderização e pode
   refletir o momento do build ou da resposta do servidor.
 - O projeto não utiliza variáveis de ambiente no estado atual.
+- Ao carregar a página inicial, o navegador envia um `GET /healthz` opaco e não
+  bloqueante para antecipar o despertar da API do Estoca no Render. Falhas nessa
+  otimização são ignoradas e não afetam a navegação do portfólio.
 - O favicon é mantido em `src/app/favicon.ico`; não há outros recursos públicos
   fora das mídias usadas nas páginas de projeto.
 
