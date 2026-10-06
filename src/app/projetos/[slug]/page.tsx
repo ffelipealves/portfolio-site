@@ -154,7 +154,7 @@ export default async function ProjectPage({
                   key={media.src}
                   className="w-[88%] shrink-0 snap-start overflow-hidden rounded-md border border-line bg-panel sm:w-[78%]"
                 >
-                  <div className="flex aspect-[16/10] items-center justify-center overflow-hidden bg-[#ece8dd]">
+                  <div className="flex aspect-[16/10] items-center justify-center overflow-hidden bg-[#eef1f0]">
                     <Image
                       src={media.src}
                       alt={media.alt}
