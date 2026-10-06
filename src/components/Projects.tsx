@@ -19,7 +19,7 @@ function ProjectGallery({ media }: { media: ProjectMedia[] }) {
 
   return (
     <div className="flex min-h-0 flex-col bg-ink/60">
-      <div className="relative flex min-h-[18rem] flex-1 items-center justify-center overflow-hidden sm:min-h-[25rem] md:min-h-[35rem]">
+      <div className="relative flex min-h-[18rem] flex-1 items-center justify-center overflow-hidden sm:min-h-[25rem] md:min-h-0">
         <Image
           key={activeMedia.src}
           src={activeMedia.src}
@@ -96,7 +96,7 @@ function ProjectModal({ project, onClose }: { project: Project; onClose: () => v
         role="dialog"
         aria-modal="true"
         aria-labelledby="project-modal-title"
-        className="project-modal-enter relative grid max-h-[calc(100vh-1.5rem)] w-full max-w-7xl overflow-y-auto rounded-2xl border border-white/15 bg-panel/80 shadow-2xl shadow-black/50 backdrop-blur-2xl md:max-h-[calc(100vh-3rem)] md:grid-cols-[minmax(0,1.35fr)_minmax(20rem,0.9fr)] md:overflow-hidden"
+        className="project-modal-enter relative grid max-h-[calc(100vh-1.5rem)] w-full max-w-7xl overflow-y-auto rounded-2xl border border-white/15 bg-panel/80 shadow-2xl shadow-black/50 backdrop-blur-2xl md:max-h-[calc(100vh-3rem)] md:grid-cols-[minmax(0,1.35fr)_minmax(20rem,0.9fr)] md:grid-rows-1 md:overflow-hidden"
       >
         <button ref={closeButtonRef} type="button" onClick={onClose} className="absolute right-4 top-4 z-20 grid size-10 place-items-center rounded-full border border-white/15 bg-ink/75 font-mono text-lg text-text shadow-lg backdrop-blur-md transition hover:border-stock-in hover:text-stock-in" aria-label="Fechar detalhes do projeto">
           ×
